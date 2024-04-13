@@ -1,1 +1,4 @@
-{}
+{
+  "github.copilot.editor.enableAutoCompletions": false,
+  "files.autoSave": "afterDelay"
+}

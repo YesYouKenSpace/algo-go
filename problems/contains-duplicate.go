@@ -1,4 +1,4 @@
-package main
+package problems
 
 func containsDuplicate(nums []int) bool {
 	nums_map := map[int]byte{}
