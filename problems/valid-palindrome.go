@@ -7,11 +7,14 @@ import (
 
 // https://neetcode.io/problems/is-palindrome
 // https://leetcode.com/problems/valid-palindrome/
-func isPalindrome(s string) (bool, error) {
+func IsPalindrome(s string) (bool, error) {
+	if len(s) == 0 {
+		return true, nil
+	}
 	left := 0
 	right := len(s) - 1
 
-	for left != right {
+	for left < right {
 		if !isAlphanumeric(s[left]) {
 			left += 1
 			continue
@@ -32,6 +35,11 @@ func isPalindrome(s string) (bool, error) {
 		right -= 1
 	}
 	return true, nil
+}
+
+func isPalindrome(s string) bool {
+	ok, _ := IsPalindrome(s)
+	return ok
 }
 
 func isAlphanumeric(c byte) bool {

@@ -18,10 +18,14 @@ func TestIsPalindrome(t *testing.T) {
 			arg:      "tab a cat",
 			expected: false,
 		},
+		{
+			arg:      "aa",
+			expected: true,
+		},
 	}
 
 	for _, tc := range tests {
-		actual, err := isPalindrome(tc.arg)
+		actual, err := IsPalindrome(tc.arg)
 		if actual != tc.expected {
 			t.Errorf("expected: %v actual: %v, arg: %s, err: %+v", tc.expected, actual, tc.arg, err)
 		}
